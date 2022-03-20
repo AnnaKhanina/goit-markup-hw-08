@@ -398,7 +398,7 @@ button {
 }
 
 .nav-list {
-  display: none;
+  display: flex;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
@@ -423,7 +423,7 @@ button {
 }
 
 .contact-list {
-  display: none;
+  display: flex;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
@@ -498,11 +498,23 @@ button {
 .menu-open-icon {
   width: 40px;
   height: 40px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-open-btn:hover .menu-open-icon,
+.menu-open-btn:focus .menu-open-icon {
+  fill: var(--accent-color);
 }
 
 .menu-close-icon {
   width: 18px;
   height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn:hover .menu-close-icon,
+.menu-close-btn:focus .menu-close-icon {
+  fill: var(--accent-color);
 }
 
 .mob-menu {
@@ -561,6 +573,33 @@ button {
   font-weight: 500;
   line-height: 28px;
   letter-spacing: 0.02em;
+}
+
+.mob-soc-list__link {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.mob-soc-list {
+  display: flex;
+}
+
+.mob-soc-list__item:not(:last-child) {
+  position: relative;
+  padding-bottom: 48px;
+  margin-right: 20px;
+}
+
+.mob-soc-list__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  height: 22px;
+  right: -10px;
+  top: 0;
 }
 
 .mob-soc-list__link {
@@ -1098,8 +1137,22 @@ button {
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  /*display: flex;
+  align-items: baseline;*/
+}
+
+@media screen and (min-width: 480px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    text-align: start;
+  }
 }
 
 .logo {
@@ -1107,30 +1160,55 @@ button {
   margin-bottom: 20px;
   color: var(--accent-color);
   font-family: Raleway;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 31px;
+  line-height: 28px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 .footer-web-color {
   color: var(--accent-filters-color);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.03em;
 }
 
-.footer-address-list {
+@media screen and (min-width: 1200px) {
+  .footer-web-color {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.footer-address__item {
   font-style: normal;
-}
-
-.footer-address-list .footer-address__link {
-  color: var(--accent-filters-color);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.03em;
 }
 
-.footer-address__item + .footer-address__item {
-  margin-bottom: 9px;
+.footer-address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-address__link {
+  text-align: center;
+  color: var(--accent-filters-color);
 }
 
 .footer-mail__link {
@@ -1152,7 +1230,14 @@ button {
 }
 
 .footer-socials {
-  margin-left: 70px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-socials {
+    margin-left: 70px;
+  }
 }
 
 .footer-socials__title {
@@ -1163,6 +1248,10 @@ button {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.footer-socials-list {
+  justify-content: center;
 }
 
 .footer-socials__item + .footer-socials__item {
@@ -1190,11 +1279,17 @@ button {
 }
 
 .footer-spam {
-  margin-left: 93px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-spam {
+    margin-left: 93px;
+  }
 }
 
 .footer-spam__title {
-  display: flex;
   margin-bottom: 20px;
   color: var(--accent-filters-color);
   font-size: 14px;
@@ -1204,13 +1299,22 @@ button {
   text-transform: uppercase;
 }
 
-.footer-form {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer-spam__title {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: flex;
+  }
 }
 
 .footer-spam-email__input {
+  margin-bottom: 20px;
   padding-left: 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
@@ -1223,6 +1327,12 @@ button {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-spam-email__input {
+    width: 358px;
+  }
 }
 
 .footer-spam__btn {
