@@ -24,7 +24,7 @@
 <body>
     <!--шапка сайта-->
     <header class="header">
-        <div class="container header__container">
+         <div class="container header__container">
             <nav class="navigation">
                 <a class="logo header__logo" lang="en" href="./index.html">Web<span class="header-web-color">Studio</span></a>
                 <ul class="nav-list list">
@@ -32,23 +32,24 @@
                     <li class="nav-list__item"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
                     <li class="nav-list__item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
                 </ul>
-            </nav>            
-                <ul class="contact-list list">
-                    <li class="contact-list__item">
-                        <a class="contact-link-mail" href="mailto:info@devstudio.com">
-                            <svg class="header-contact__icon" width="16" height="12">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>
-                        info@devstudio.com</a>    
-                    </li>
-                    <li class="contact-list__item">
-                        <a class="contact-link-tel" href="tel.:+380961111111">
-                            <svg class="header-contact__icon" width="10" height="16">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                        +38 096 111 11 11</a>
-                    </li>
-                </ul>
+            </nav>   
+            <ul class="contact-list list">
+                <li class="contact-list__item">
+                    <a class="contact-link-mail" href="mailto:info@devstudio.com">
+                        <svg class="header-contact-icon" width="16" height="12">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>
+                    info@devstudio.com</a>    
+                </li>
+                <li class="contact-list__item">
+                    <a class="contact-link-tel" href="tel.:+380961111111">
+                        <svg class="header-contact-icon" width="10" height="16">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg>
+                    +38 096 111 11 11</a>
+                </li>
+            </ul>            
+        
 
                 <button type="button" class="menu-open-btn">
                     <svg class="menu-open-icon">
@@ -466,6 +467,7 @@
         <footer class="footer">
             <div class="container footer__container">
                 <div class="footer-top">
+                    <div class="footer-address">
                     <a class="logo" lang="en" href="./index.html">Web<span class="footer-web-color">Studio</span></a>
                         <address>
                             <ul class="footer-address-list list">
@@ -481,7 +483,7 @@
                                 </li>
                             </ul>
                         </address>
-                </div>
+                    </div>    
                 <div class="footer-socials">
                     <p class="footer-socials__title title">присоединяйтесь</p>
                         <ul class="footer-socials-list list">
@@ -515,17 +517,19 @@
                             </li>
                         </ul> 
                 </div>
+            </div>
                 <div class="footer-spam">                   
                     <p class="footer-spam__title title">подпишитесь на рассылку</p>                        
                     <form class="footer-form">
-                                                      
+                         <div class="footer-form-input">                             
                            <input
                                 type="email"
                                 name="spam-email"
                                 placeholder="E-mail"
                                 id="e-mail"
                                 class="footer-spam-email__input"
-                            />                                                                                                                                                    
+                            /> 
+                         </div>
                             <button type="submit" class="footer-spam__btn">Подписаться
                                 <svg class="footer-spam__icon" width="24" height="24">
                                     <use href="./images/icons.svg#icon-send"></use>
@@ -621,5 +625,4 @@
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
-
 </html>

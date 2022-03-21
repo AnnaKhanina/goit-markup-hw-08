@@ -54,14 +54,14 @@
         <!--портфолио-->
         <section class="portfolio section">
             <div class="container portfolio__container">
-                <!--h2 class="visually-hidden">Фильтры</h2>
+                <h2 class="visually-hidden">Фильтры</h2>
                 <ul class="portfolio-list list">
                     <li class="portfolio-list__item"><button type="button" class="portfolio-list__btn">Все</button></li>
                     <li class="portfolio-list__item"><button type="button" class="portfolio-list__btn">Веб-сайты</button></li>
                     <li class="portfolio-list__item"><button type="button" class="portfolio-list__btn">Приложения</button></li>
                     <li class="portfolio-list__item"><button type="button" class="portfolio-list__btn">Дизайн</button></li>
                     <li class="portfolio-list__item"><button type="button" class="portfolio-list__btn">Маркетинг</button></li>
-                </ul-->                
+                </ul>                
             <!--проекты-->                
                 <h2 class="visually-hidden">Проекты</h2>
                 <ul class="projects-list list">
@@ -315,8 +315,9 @@
     <!--подвал-->
     <footer class="footer">
         <div class="container footer__container">
-            <div>
-                <a class="logo" lang="en" href="./index.html">Web<span class="footer-web-color">Studio</span></a>
+            <div class="footer-top">
+                <div class="footer-address">
+                    <a class="logo" lang="en" href="./index.html">Web<span class="footer-web-color">Studio</span></a>
                     <address>
                         <ul class="footer-address-list list">
                             <li class="footer-address__item">
@@ -331,9 +332,9 @@
                             </li>
                         </ul>
                     </address>
-            </div>
-            <div class="footer-socials">
-                <p class="footer-socials__title">присоединяйтесь</p>
+                </div>
+                <div class="footer-socials">
+                    <p class="footer-socials__title title">присоединяйтесь</p>
                     <ul class="footer-socials-list list">
                         <li class="footer-socials__item">
                             <a href="" class="footer-socials__link">
@@ -363,29 +364,24 @@
                                 </svg>
                             </a>
                         </li>
-                    </ul> 
+                    </ul>
+                </div>
             </div>
-            <div class="footer-spam">                   
-                <p class="footer-spam__title title">подпишитесь на рассылку</p>                        
+            <div class="footer-spam">
+                <p class="footer-spam__title title">подпишитесь на рассылку</p>
                 <form class="footer-form">
-                                                  
-                       <input
-                            type="email"
-                            name="spam-email"
-                            placeholder="E-mail"
-                            id="e-mail"
-                            class="footer-spam-email__input"
-                        />                                                                                                                                                    
-                        <button type="submit" class="footer-spam__btn">Подписаться
-                            <svg class="footer-spam__icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>                                 
-                </form>                       
+                    <div class="footer-form-input">
+                        <input type="email" name="spam-email" placeholder="E-mail" id="e-mail"
+                            class="footer-spam-email__input" />
+                    </div>
+                    <button type="submit" class="footer-spam__btn">Подписаться
+                        <svg class="footer-spam__icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
-        
-</footer>
-        
+    </footer>        
 </body>
-
 </html>

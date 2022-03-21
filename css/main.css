@@ -99,6 +99,12 @@ button {
   margin-right: auto;
 }
 
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -398,12 +404,23 @@ button {
 }
 
 .nav-list {
-  display: flex;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-list {
+    display: flex;
+  }
 }
 
 .nav-list__item + .nav-list__item {
@@ -423,7 +440,6 @@ button {
 }
 
 .contact-list {
-  display: flex;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
@@ -431,14 +447,20 @@ button {
   letter-spacing: 0.02em;
 }
 
-.contact-list__item + .contact-list__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list__item + .contact-list__item {
+    margin-left: 50px;
+  }
 }
 
 .contact-link-mail {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--link-list-color);
 }
 
@@ -446,15 +468,40 @@ button {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .contact-link-mail {
+    padding-top: 21px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-link-mail {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .contact-link-tel {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--link-list-color);
 }
 
 .contact-link-tel:hover, .contact-link-tel:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-link-tel {
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-link-tel {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .current {
@@ -971,37 +1018,35 @@ button {
   fill: currentColor;
 }
 
-/*portfilio__container {
-  @extend %align-list;
-}*/
+@media screen and (min-width: 1200px) {
+  .portfilio__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .portfolio-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
   margin-top: 0;
-  margin-bottom: 34px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    justify-content: center;
+    margin-bottom: 34px;
+  }
+}
+
+.portfolio-list__item {
+  margin-bottom: 15px;
 }
 
 .portfolio-list__item + .portfolio-list__item {
   margin-left: 8px;
 }
 
-/*.portfolio-list {
-  margin-bottom: -15px;
-  @include media(320px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -8px;
-  }
-  @include media(768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -8px;
-  }
-}
-
-.portfolio-list__item + .portfolio-list__item {
-  margin-left: 8px;
-}*/
 .portfolio-list__btn {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px 22px;
@@ -1136,12 +1181,7 @@ button {
   background-color: var(--background-color);
 }
 
-.footer__container {
-  /*display: flex;
-  align-items: baseline;*/
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .footer__container {
     text-align: center;
   }
@@ -1152,6 +1192,14 @@ button {
     display: flex;
     align-items: baseline;
     text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
   }
 }
 
@@ -1222,7 +1270,7 @@ button {
 
 .footer-tel__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--link-list-color);
+  color: var(--address-list-color);
 }
 
 .footer-tel__link:hover, .footer-tel__link:focus {
@@ -1232,6 +1280,12 @@ button {
 .footer-socials {
   align-items: center;
   margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-socials {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1279,7 +1333,6 @@ button {
 }
 
 .footer-spam {
-  align-items: center;
   margin-top: 60px;
 }
 
@@ -1311,6 +1364,13 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .footer-spam-email__input {
   margin-bottom: 20px;
   padding-left: 16px;
@@ -1327,6 +1387,12 @@ button {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-spam-email__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

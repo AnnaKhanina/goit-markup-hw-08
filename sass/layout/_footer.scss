@@ -5,16 +5,21 @@
 }
 
 .footer__container {
-  /*display: flex;
-  align-items: baseline;*/
-  //text-align: center;
-  @include media(480px) {
+  @include media(320px) {
     text-align: center;
   }
   @include media(1200px) {
     display: flex;
     align-items: baseline;
     text-align: start;
+  }
+}
+
+.footer-top {
+  @include media(768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
   }
 }
 
@@ -64,7 +69,7 @@
 
 .footer-tel__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--link-list-color);
+  color: var(--address-list-color);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -74,6 +79,9 @@
 .footer-socials {
   align-items: center;
   margin-top: 60px;
+  @include media(768px) {
+    margin-top: 0;
+  }
   @include media(1200px) {
     margin-left: 70px;
   }
@@ -117,7 +125,6 @@
 }
 
 .footer-spam {
-  align-items: center;
   margin-top: 60px;
   @include media(1200px) {
     margin-left: 93px;
@@ -125,7 +132,6 @@
 }
 
 .footer-spam__title {
-  //display: flex;
   margin-bottom: 20px;
   color: var(--accent-filters-color);
   @include font(14px, 700, 16px, 0.03em);
@@ -138,6 +144,13 @@
 .footer-form {
   @include media(1200px) {
     display: flex;
+  }
+}
+
+.footer-form-input {
+  @include media(768px) {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -155,6 +168,9 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   @include font(16px, 500, 20px, 0.03em);
+  @include media(768px) {
+    width: 450px;
+  }
   @include media(1200px) {
     width: 358px;
   }
