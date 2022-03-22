@@ -404,6 +404,7 @@ button {
 }
 
 .nav-list {
+  display: flex;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
@@ -411,15 +412,9 @@ button {
   letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav-list {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .nav-list {
-    display: flex;
+    display: none;
   }
 }
 
@@ -445,6 +440,12 @@ button {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-list {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -807,7 +808,13 @@ button {
 }
 
 .employment {
-  display: none;
+  display: flex;
+}
+
+@media screen and (max-width: 1199px) {
+  .employment {
+    display: none;
+  }
 }
 
 .employment-list {
