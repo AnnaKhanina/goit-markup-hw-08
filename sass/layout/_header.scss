@@ -1,3 +1,8 @@
+/*.header {
+  position: relative;
+}
+*/
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -124,12 +129,39 @@
   fill: currentColor;
 }
 
-.menu-close-btn {
-  display: block;
+/*.menu-button {
+  display: inline-flex;
   margin-left: auto;
+  padding: 0;
   background-color: transparent;
-  margin-bottom: 8px;
 }
+
+.menu-button .menu-close {
+  display: none;
+}
+
+.menu-button.is-open .menu-close {
+  display: block;
+}
+
+.menu-button.is-open .menu-open {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: tomato;
+  padding: 20px;
+  text-align: center;
+  font-style: 20px;
+  &.is-open {
+    display: block;
+  }
+}*/
 
 .menu-open-btn {
   display: block;
@@ -147,17 +179,8 @@
   }
 }
 
-.menu-close-icon {
-  width: 18px;
-  height: 18px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .menu-close-btn:hover &,
-  .menu-close-btn:focus & {
-    fill: var(--accent-color);
-  }
-}
-
 .mob-menu {
+  display: none;
   position: fixed;
   z-index: 1;
   overflow: auto;
@@ -179,6 +202,23 @@
 .mob-menu-top,
 .mob-menu-bottom {
   padding-left: 25px;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+.menu-close-icon {
+  width: 40px;
+  height: 40px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .menu-close-btn:hover &,
+  .menu-close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }
 
 .mob-contact-list {

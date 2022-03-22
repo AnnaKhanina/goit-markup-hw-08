@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css" />    
     <link rel="stylesheet" href="./css/main.css" />
@@ -26,12 +26,12 @@
     <header class="header">
          <div class="container header__container">
             <nav class="navigation">
-                <a class="logo header__logo" lang="en" href="./index.html">Web<span class="header-web-color">Studio</span></a>
+                <a class="logo header__logo" lang="en" href="./index.html">Web<span class="header-web-color">Studio</span></a>                
                 <ul class="nav-list list">
                     <li class="nav-list__item"><a href="./index.html" class="nav-link current">Студия</a></li>
                     <li class="nav-list__item"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
                     <li class="nav-list__item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
-                </ul>
+                </ul>                
             </nav>   
             <ul class="contact-list list">
                 <li class="contact-list__item">
@@ -48,17 +48,62 @@
                         </svg>
                     +38 096 111 11 11</a>
                 </li>
-            </ul>            
+            </ul>             
+            <button type="button" class="menu-open-btn" data-menu-open>
+                <svg class="menu-open-icon">
+                    <use href="./images/icons.svg#icon-menu-open"></use>
+                </svg>
+            </button> 
+         </div>   
+        <div class="mob-menu is-hidden" data-menu>
+            <div class="container">
+                <div class="mob-menu-top">                        
+                    <button type="button" class="menu-close-btn" data-menu-close>
+                        <svg class="menu-close-icon">
+                            <use href="./images/icons.svg#icon-menu-close"></use>
+                        </svg>
+                    </button>
+                    <ul class="mob-menu-list list">
+                        <li class="mob-menu-list__item"><a href="./index.html" class="mob-menu__link">Студия</a></li>
+                        <li class="mob-menu-list__item"><a href="./portfolio.html" class="mob-menu__link">Портфолио</a></li>
+                        <li class="mob-menu-list__item"><a href="./contacts.html" class="mob-menu__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="mob-menu-bottom">
+                    <ul class="mob-contact-list list">                   
+                        <li class="mob-contact-list__item">
+                            <a class="mob-contact-link-tel" href="tel.:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mob-contact-list__item">
+                            <a class="mob-contact-link-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-soc-list list">
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link">Instagram</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link">Twitter</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link">Facebook</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </div>            
+            
+        <!--button type="button" class="header-mobile-btn">
+            <svg class="header-mobile-btn-icon">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+        </button>     
         
-
-                <!--button type="button" class="menu-open-btn is-hidden">
-                    <svg class="menu-open-icon">
-                        <use href="./images/icons.svg#icon-menu-open"></use>
-                    </svg>
-                </button--> 
-            </div>
-            <!--div class="mob-menu is-hidden">
-                <div class="container">
+            <div class="mob-menu">
+                <div class="mob-menu__container">
                     <div class="mob-menu-top">                        
                         <button type="button" class="menu-close-btn">
                             <svg class="menu-close-icon">
@@ -94,10 +139,30 @@
                                 <a href="" class="mob-soc-list__link">LinkedIn</a>
                             </li>
                         </ul>
-                    </div>
+                    </div>           
+                </div>
+            </div-->    
+                
+            <!--button type="button" class="menu-button is-open"
+                data-menu-button>
+                    <svg 
+                        width="40"
+                        height="40" 
+                        aria-label="Переключатель мобильного меню"
+                        aria-expanded="false"
+                        > 
+                        <use сlass="menu-close" href="./images/icons.svg#icon-menu-close"></use>
+                        <use сlass="menu-open" href="./images/icons.svg#icon-menu-open"></use>                                               
+                    </svg>                
+                </button>   
+                <div class="menu-mobile is-open">
+                    меню
                 </div>            
-            </div-->            
-        </header>
+            </div-->
+
+
+            
+        </header>       
     <!--hero-->
         <main>
             <section class="hero section">
@@ -622,7 +687,7 @@
             </form>
             </div>            
         </div>   
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
