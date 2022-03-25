@@ -572,7 +572,7 @@ button {
 }
 
 .mob-menu {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 1;
   overflow: auto;
