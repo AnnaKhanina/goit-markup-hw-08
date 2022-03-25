@@ -614,7 +614,6 @@ button {
 
 .mob-soc-list {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .mob-soc-list__item {
