@@ -125,7 +125,9 @@
 }
 
 .footer-spam {
-  margin-top: 60px;
+  @media (min-width: 350px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
   @include media(1200px) {
     margin-left: 93px;
   }
